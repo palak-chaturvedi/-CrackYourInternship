@@ -1,0 +1,15 @@
+class Solution {
+public:
+    bool canJump(vector<int>& nums) {
+        int n = nums.size();
+        int maxFar=0;
+        int i;
+        
+        for(i=0;i<=maxFar;i++){
+            maxFar = max(maxFar, nums[i]+i);
+            if(maxFar>=n-1)
+                return true;
+        }
+        return false;
+    }
+};
